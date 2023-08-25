@@ -3,5 +3,6 @@ $Documents = [Environment]::GetFolderPath([Environment+SpecialFolder]::MyDocumen
 $Downloads = [Environment]::ExpandEnvironmentVariables("%USERPROFILE%\Downloads")
 Invoke-WebRequest -Uri "https://i.imgur.com/NpJHp6L.png" -OutFile "$Desktop\WarningPCUnlocked.png"; Invoke-WebRequest -Uri "https://i.imgur.com/MhU0rkN.jpg" -OutFile "$Desktop\egg1.jpg"; Invoke-WebRequest -Uri "https://i.imgur.com/yifHSyV.jpg" -OutFile "$Documents\egg2.jpg"; Invoke-WebRequest -Uri "https://i.imgur.com/ZUTHKPK.jpg" -OutFile "$Downloads\egg3.jpg"; & "$Desktop\WarningPCUnlocked.png";
 Add-Type -AssemblyName System.Windows.Forms
+Start-Sleep -Seconds 2
 [System.Windows.Forms.SendKeys]::SendWait("{F11}")
 
